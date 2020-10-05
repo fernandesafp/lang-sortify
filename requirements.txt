@@ -1,0 +1,4 @@
+langdetect==1.0.8
+iso639==0.1.4
+lyricsgenius==2.0.2
+spotipy==2.16.0
