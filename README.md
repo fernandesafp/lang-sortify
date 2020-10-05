@@ -1,2 +1,35 @@
 # LangSortify
 Separates songs in a playlist by language.
+
+# How to run
+##Install the required libraries
+Look up requirements.txt and run
+```
+pip install langdetect
+pip install iso639
+pip install lyricsgenius
+pip install spotipy
+```
+
+##Export environment variables
+Run this with your credentials in your environment
+```
+export SPOTIPY_CLIENT_ID='your_spotify_client_id'
+export SPOTIPY_CLIENT_SECRET='your_spotify_client_secret'
+export SPOTIPY_REDIRECT_URI='your_genius_redirect_uri'
+export GENIUS_ACCESS_TOKEN='your_genius_access_token'
+```
+##Inputs
+Two windows will request the Spotify URI and if user wants to get language from the song lyrics.
+
+<img src="/screenshots/spotify_uri.png" alt="Spotify URI window." width="750"/>
+
+<img src="/screenshots/genius_window.png" alt="Genius search window." width="750"/>
+
+##New playlists will show up
+New playlists should show sorted by language.
+
+![Sorted playlists.](/screenshots/sorted_playlists.png?raw=true)
+
+
+Note: Although looking at the song name or album can be enough, because some songs were sung in other language with English titles, I decided to add lyrics to the language detection library.
