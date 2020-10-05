@@ -1,5 +1,5 @@
 # LangSortify
-Separates songs in a playlist by language.
+Separates songs in a Spotify playlist by language.
 
 # How to run
 ## Install the required libraries
