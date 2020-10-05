@@ -32,4 +32,4 @@ New playlists should show sorted by language.
 ![Sorted playlists.](/screenshots/sorted_playlists.png?raw=true)
 
 
-Note: Although looking at the song name or album can be enough, because some songs were sung in other language with English titles, I decided to add lyrics to the language detection library.
+Note: Although looking at the song name or album can be enough, because some songs were sung in another language with English titles, I decided to add language detection of their lyrics.
