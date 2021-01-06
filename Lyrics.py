@@ -10,9 +10,9 @@ def get_lyrics(genius, track):
             song = genius.search_song(song_name, artist)
             lyrics = song.lyrics.replace('\n', '. ')
             break
-        except:
+        except Exception as ex:
+            print('Lyrics not found. Exception: ' + ex)
             lyrics = 'unknown'
-            pass
 
     return lyrics
 
