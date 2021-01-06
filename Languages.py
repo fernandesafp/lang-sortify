@@ -10,6 +10,7 @@ def get_lyrics_language(tracks_with_lyrics):
     Therefore, the priority will be given to the detection of non-english text,
     either by the lyrics, song name or album. The selection priority will be
     lyrics > song name > album.
+
     '''
 
     tracks_with_languages = []
