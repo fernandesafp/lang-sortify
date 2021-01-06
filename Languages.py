@@ -18,15 +18,24 @@ def get_lyrics_language(tracks_with_lyrics):
         song_name = track[1]
         album = track[2]
         song_uri = track[3]
-        try: lyrics = track[4]
-        except: lyrics = 'unknown'
+        if (len(track) == 5):
+            lyrics = track[4]
+        else:
+            lyrics = 'unknown'
 
         #Language detection
         print('Checking language of {} from {}.'.format(artists, song_name))
-        try: song_name_lang = detect(song_name)
-        except: song_name_lang = 'unknown'
-        try: album_lang = detect(album)
-        except: album_lang = 'unknown'
+        try:
+            song_name_lang = detect(song_name)
+        except Exception as ex:
+            print('Could not detect language of song name ' + song_name + '. Exception: ' + ex)
+            song_name_lang = 'unknown'
+
+        try:
+            album_lang = detect(album)
+        except Exception as ex:
+            print('Could not detect language of album ' + album  + '. Exception: ' + ex)
+            album_lang = 'unknown'
 
         lyrics_lang = detect(lyrics)
 
@@ -46,12 +55,14 @@ def get_lyrics_language(tracks_with_lyrics):
         try:
             native = iso639.to_native(language).split(';')[0] #Converts to native
             english = iso639.to_name(language).split(';')[0] #Converts to english
+
             if native != english:
                 language = '{} ({})'.format(native, english)
             else: #Invalid code
                 language = native
-        except:
-            pass
+        except Exception as ex:
+            print('Exception whilst obtaining language names. ' + ex)
+
         print('Language: ' + language)
         tracks_with_languages.append([song_uri, language])
 
