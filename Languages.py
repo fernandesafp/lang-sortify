@@ -2,15 +2,13 @@ from langdetect import detect
 import iso639
 
 def get_lyrics_language(tracks_with_lyrics):
-    '''
-    Obtains the languages based on the tracks' informations
+    '''Obtains the languages based on the tracks' informations
 
     Because the english language is in the majority among my playlists, it
     will be harder to sort foreign languages in the english playlist.
     Therefore, the priority will be given to the detection of non-english text,
     either by the lyrics, song name or album. The selection priority will be
     lyrics > song name > album.
-
     '''
 
     tracks_with_languages = []
