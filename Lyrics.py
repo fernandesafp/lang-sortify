@@ -12,7 +12,6 @@ def get_lyrics(genius, track):
             break
         except:
             lyrics = 'unknown'
-            pass
 
     return lyrics
 
