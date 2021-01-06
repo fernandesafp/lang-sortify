@@ -3,6 +3,7 @@ import iso639
 
 def get_lyrics_language(tracks_with_lyrics):
     '''
+    Obtains the languages based on the tracks' informations
 
     Because the english language is in the majority among my playlists, it
     will be harder to sort foreign languages in the english playlist.
