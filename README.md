@@ -2,7 +2,9 @@
 Separates songs in a Spotify playlist by language.
 
 ## Install the required libraries
-Look up requirements.txt and run
+Look up requirements.txt and run `pip install -r requirements.txt`.
+
+Alternatively:
 ```console
 pip install langdetect
 pip install iso639
